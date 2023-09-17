@@ -22,7 +22,7 @@ def main(count):
 
 @app.route("/number/trivia")
 def main1():
-    facts = []
+    facts = ""
     response = requests.get(base_url + url_random_trivia)
     facts.append(response.text)
     return {"fact": facts}
@@ -30,7 +30,7 @@ def main1():
 
 @app.route("/number/math")
 def main2():
-    facts = []
+    facts = ""
     response = requests.get(base_url + url_random_math)
     facts.append(response.text)
     return {"fact": facts}
