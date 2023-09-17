@@ -20,16 +20,16 @@ def main(count):
         facts.append(response.text)
     return {"count": count, "facts": facts}
 
-@app.route("/numbers/trivia")
-def main():
+@app.route("/number/trivia")
+def main1():
     facts = []
     response = requests.get(base_url + url_random_trivia)
     facts.append(response.text)
     return {"fact": facts}
 
 
-@app.route("/numbers/math")
-def main():
+@app.route("/number/math")
+def main2():
     facts = []
     response = requests.get(base_url + url_random_math)
     facts.append(response.text)
